@@ -16,9 +16,13 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         int age;
         System.out.print("How old are you?: ");
-        age = scan.nextInt();
-        if(age >= 21){
-            System.out.println("You get a wristband!");
-        }
+        if(scan.hasNextInt()){
+            age = scan.nextInt();
+            if(age >= 21){
+                System.out.println("You get a wristband!");
+            }
+        } else System.out.print("Error: Invalid Input");
+
+
     }
 }
